@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66C868D31AE0BE8D00BC3DB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C868D21AE0BE8D00BC3DB1 /* main.m */; };
+		66C868D61AE0BE8D00BC3DB1 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66C868D51AE0BE8D00BC3DB1 /* AppDelegate.mm */; };
+		66C868D91AE0BE8D00BC3DB1 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66C868D81AE0BE8D00BC3DB1 /* ViewController.mm */; };
+		66C868DC1AE0BE8D00BC3DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C868DA1AE0BE8D00BC3DB1 /* Main.storyboard */; };
+		66C868DE1AE0BE8D00BC3DB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C868DD1AE0BE8D00BC3DB1 /* Images.xcassets */; };
+		66C868E11AE0BE8D00BC3DB1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C868DF1AE0BE8D00BC3DB1 /* LaunchScreen.xib */; };
+		66C868ED1AE0BE8D00BC3DB1 /* SenseAVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C868EC1AE0BE8D00BC3DB1 /* SenseAVTests.m */; };
+		66C868FF1AE0BF3100BC3DB1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C868FE1AE0BF3100BC3DB1 /* CoreImage.framework */; };
+		66C869011AE0BF3700BC3DB1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869001AE0BF3700BC3DB1 /* ImageIO.framework */; };
+		66C869031AE0BF4900BC3DB1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869021AE0BF4900BC3DB1 /* GLKit.framework */; };
+		66C869051AE0BF5000BC3DB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869041AE0BF5000BC3DB1 /* Foundation.framework */; };
+		66C869071AE0BF5D00BC3DB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869061AE0BF5D00BC3DB1 /* UIKit.framework */; };
+		66C869091AE0BF6500BC3DB1 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869081AE0BF6500BC3DB1 /* ExternalAccessory.framework */; };
+		66C8690B1AE0BF7300BC3DB1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8690A1AE0BF7300BC3DB1 /* OpenGLES.framework */; };
+		66C8690D1AE0BF7B00BC3DB1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8690C1AE0BF7B00BC3DB1 /* AVFoundation.framework */; };
+		66C8690F1AE0BF8200BC3DB1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8690E1AE0BF8200BC3DB1 /* CoreVideo.framework */; };
+		66C869111AE0BF8E00BC3DB1 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869101AE0BF8E00BC3DB1 /* CoreMedia.framework */; };
+		66C869131AE0BF9600BC3DB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869121AE0BF9600BC3DB1 /* CoreGraphics.framework */; };
+		66C869151AE0BFA000BC3DB1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869141AE0BFA000BC3DB1 /* Accelerate.framework */; };
+		66C869171AE0BFA600BC3DB1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869161AE0BFA600BC3DB1 /* QuartzCore.framework */; };
+		66C8691B1AE0BFDC00BC3DB1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8691A1AE0BFDC00BC3DB1 /* MessageUI.framework */; };
+		66C8691D1AE0BFE400BC3DB1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8691C1AE0BFE400BC3DB1 /* libz.dylib */; };
+		66C869211AE0C06B00BC3DB1 /* ViewController+Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66C869201AE0C06B00BC3DB1 /* ViewController+Camera.mm */; };
+		66FAA3FA1AE0EFB2000445D2 /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869181AE0BFC800BC3DB1 /* Structure.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66C868E71AE0BE8D00BC3DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66C868C51AE0BE8D00BC3DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66C868CC1AE0BE8D00BC3DB1;
+			remoteInfo = SenseAV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66C868CD1AE0BE8D00BC3DB1 /* SenseAV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SenseAV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C868D11AE0BE8D00BC3DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66C868D21AE0BE8D00BC3DB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66C868D41AE0BE8D00BC3DB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		66C868D51AE0BE8D00BC3DB1 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		66C868D71AE0BE8D00BC3DB1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		66C868D81AE0BE8D00BC3DB1 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		66C868DB1AE0BE8D00BC3DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66C868DD1AE0BE8D00BC3DB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		66C868E01AE0BE8D00BC3DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		66C868E61AE0BE8D00BC3DB1 /* SenseAVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenseAVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C868EB1AE0BE8D00BC3DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66C868EC1AE0BE8D00BC3DB1 /* SenseAVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SenseAVTests.m; sourceTree = "<group>"; };
+		66C868FE1AE0BF3100BC3DB1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		66C869001AE0BF3700BC3DB1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		66C869021AE0BF4900BC3DB1 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		66C869041AE0BF5000BC3DB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		66C869061AE0BF5D00BC3DB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		66C869081AE0BF6500BC3DB1 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		66C8690A1AE0BF7300BC3DB1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		66C8690C1AE0BF7B00BC3DB1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		66C8690E1AE0BF8200BC3DB1 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		66C869101AE0BF8E00BC3DB1 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		66C869121AE0BF9600BC3DB1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		66C869141AE0BFA000BC3DB1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		66C869161AE0BFA600BC3DB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		66C869181AE0BFC800BC3DB1 /* Structure.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Structure.framework; path = "../../Structure SDK/Frameworks/Structure.framework"; sourceTree = "<group>"; };
+		66C8691A1AE0BFDC00BC3DB1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		66C8691C1AE0BFE400BC3DB1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		66C8691F1AE0C06B00BC3DB1 /* ViewController+Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+Camera.h"; sourceTree = "<group>"; };
+		66C869201AE0C06B00BC3DB1 /* ViewController+Camera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "ViewController+Camera.mm"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66C868CA1AE0BE8D00BC3DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66C8691D1AE0BFE400BC3DB1 /* libz.dylib in Frameworks */,
+				66C8691B1AE0BFDC00BC3DB1 /* MessageUI.framework in Frameworks */,
+				66C868FF1AE0BF3100BC3DB1 /* CoreImage.framework in Frameworks */,
+				66C869171AE0BFA600BC3DB1 /* QuartzCore.framework in Frameworks */,
+				66C869151AE0BFA000BC3DB1 /* Accelerate.framework in Frameworks */,
+				66C869131AE0BF9600BC3DB1 /* CoreGraphics.framework in Frameworks */,
+				66C869111AE0BF8E00BC3DB1 /* CoreMedia.framework in Frameworks */,
+				66C8690F1AE0BF8200BC3DB1 /* CoreVideo.framework in Frameworks */,
+				66C8690D1AE0BF7B00BC3DB1 /* AVFoundation.framework in Frameworks */,
+				66C8690B1AE0BF7300BC3DB1 /* OpenGLES.framework in Frameworks */,
+				66C869091AE0BF6500BC3DB1 /* ExternalAccessory.framework in Frameworks */,
+				66C869071AE0BF5D00BC3DB1 /* UIKit.framework in Frameworks */,
+				66C869051AE0BF5000BC3DB1 /* Foundation.framework in Frameworks */,
+				66C869031AE0BF4900BC3DB1 /* GLKit.framework in Frameworks */,
+				66FAA3FA1AE0EFB2000445D2 /* Structure.framework in Frameworks */,
+				66C869011AE0BF3700BC3DB1 /* ImageIO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66C868E31AE0BE8D00BC3DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66C868C41AE0BE8D00BC3DB1 = {
+			isa = PBXGroup;
+			children = (
+				66C8691E1AE0C01800BC3DB1 /* Frameworks */,
+				66C868CF1AE0BE8D00BC3DB1 /* SenseAV */,
+				66C868E91AE0BE8D00BC3DB1 /* SenseAVTests */,
+				66C868CE1AE0BE8D00BC3DB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66C868CE1AE0BE8D00BC3DB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66C868CD1AE0BE8D00BC3DB1 /* SenseAV.app */,
+				66C868E61AE0BE8D00BC3DB1 /* SenseAVTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66C868CF1AE0BE8D00BC3DB1 /* SenseAV */ = {
+			isa = PBXGroup;
+			children = (
+				66C868D41AE0BE8D00BC3DB1 /* AppDelegate.h */,
+				66C868D51AE0BE8D00BC3DB1 /* AppDelegate.mm */,
+				66C868D71AE0BE8D00BC3DB1 /* ViewController.h */,
+				66C868D81AE0BE8D00BC3DB1 /* ViewController.mm */,
+				66C8691F1AE0C06B00BC3DB1 /* ViewController+Camera.h */,
+				66C869201AE0C06B00BC3DB1 /* ViewController+Camera.mm */,
+				66C868DA1AE0BE8D00BC3DB1 /* Main.storyboard */,
+				66C868DD1AE0BE8D00BC3DB1 /* Images.xcassets */,
+				66C868DF1AE0BE8D00BC3DB1 /* LaunchScreen.xib */,
+				66C868D01AE0BE8D00BC3DB1 /* Supporting Files */,
+			);
+			path = SenseAV;
+			sourceTree = "<group>";
+		};
+		66C868D01AE0BE8D00BC3DB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66C868D11AE0BE8D00BC3DB1 /* Info.plist */,
+				66C868D21AE0BE8D00BC3DB1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66C868E91AE0BE8D00BC3DB1 /* SenseAVTests */ = {
+			isa = PBXGroup;
+			children = (
+				66C868EC1AE0BE8D00BC3DB1 /* SenseAVTests.m */,
+				66C868EA1AE0BE8D00BC3DB1 /* Supporting Files */,
+			);
+			path = SenseAVTests;
+			sourceTree = "<group>";
+		};
+		66C868EA1AE0BE8D00BC3DB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66C868EB1AE0BE8D00BC3DB1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66C8691E1AE0C01800BC3DB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66C8691C1AE0BFE400BC3DB1 /* libz.dylib */,
+				66C8691A1AE0BFDC00BC3DB1 /* MessageUI.framework */,
+				66C869181AE0BFC800BC3DB1 /* Structure.framework */,
+				66C869161AE0BFA600BC3DB1 /* QuartzCore.framework */,
+				66C869141AE0BFA000BC3DB1 /* Accelerate.framework */,
+				66C869121AE0BF9600BC3DB1 /* CoreGraphics.framework */,
+				66C869101AE0BF8E00BC3DB1 /* CoreMedia.framework */,
+				66C8690E1AE0BF8200BC3DB1 /* CoreVideo.framework */,
+				66C8690C1AE0BF7B00BC3DB1 /* AVFoundation.framework */,
+				66C8690A1AE0BF7300BC3DB1 /* OpenGLES.framework */,
+				66C869081AE0BF6500BC3DB1 /* ExternalAccessory.framework */,
+				66C869061AE0BF5D00BC3DB1 /* UIKit.framework */,
+				66C869041AE0BF5000BC3DB1 /* Foundation.framework */,
+				66C869021AE0BF4900BC3DB1 /* GLKit.framework */,
+				66C869001AE0BF3700BC3DB1 /* ImageIO.framework */,
+				66C868FE1AE0BF3100BC3DB1 /* CoreImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66C868CC1AE0BE8D00BC3DB1 /* SenseAV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66C868F01AE0BE8D00BC3DB1 /* Build configuration list for PBXNativeTarget "SenseAV" */;
+			buildPhases = (
+				66C868C91AE0BE8D00BC3DB1 /* Sources */,
+				66C868CA1AE0BE8D00BC3DB1 /* Frameworks */,
+				66C868CB1AE0BE8D00BC3DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SenseAV;
+			productName = SenseAV;
+			productReference = 66C868CD1AE0BE8D00BC3DB1 /* SenseAV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66C868E51AE0BE8D00BC3DB1 /* SenseAVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66C868F31AE0BE8D00BC3DB1 /* Build configuration list for PBXNativeTarget "SenseAVTests" */;
+			buildPhases = (
+				66C868E21AE0BE8D00BC3DB1 /* Sources */,
+				66C868E31AE0BE8D00BC3DB1 /* Frameworks */,
+				66C868E41AE0BE8D00BC3DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66C868E81AE0BE8D00BC3DB1 /* PBXTargetDependency */,
+			);
+			name = SenseAVTests;
+			productName = SenseAVTests;
+			productReference = 66C868E61AE0BE8D00BC3DB1 /* SenseAVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66C868C51AE0BE8D00BC3DB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Advance Analytics Institute";
+				TargetAttributes = {
+					66C868CC1AE0BE8D00BC3DB1 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					66C868E51AE0BE8D00BC3DB1 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 66C868CC1AE0BE8D00BC3DB1;
+					};
+				};
+			};
+			buildConfigurationList = 66C868C81AE0BE8D00BC3DB1 /* Build configuration list for PBXProject "SenseAV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66C868C41AE0BE8D00BC3DB1;
+			productRefGroup = 66C868CE1AE0BE8D00BC3DB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66C868CC1AE0BE8D00BC3DB1 /* SenseAV */,
+				66C868E51AE0BE8D00BC3DB1 /* SenseAVTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66C868CB1AE0BE8D00BC3DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66C868DC1AE0BE8D00BC3DB1 /* Main.storyboard in Resources */,
+				66C868E11AE0BE8D00BC3DB1 /* LaunchScreen.xib in Resources */,
+				66C868DE1AE0BE8D00BC3DB1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66C868E41AE0BE8D00BC3DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66C868C91AE0BE8D00BC3DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66C868D91AE0BE8D00BC3DB1 /* ViewController.mm in Sources */,
+				66C869211AE0C06B00BC3DB1 /* ViewController+Camera.mm in Sources */,
+				66C868D61AE0BE8D00BC3DB1 /* AppDelegate.mm in Sources */,
+				66C868D31AE0BE8D00BC3DB1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66C868E21AE0BE8D00BC3DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66C868ED1AE0BE8D00BC3DB1 /* SenseAVTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66C868E81AE0BE8D00BC3DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66C868CC1AE0BE8D00BC3DB1 /* SenseAV */;
+			targetProxy = 66C868E71AE0BE8D00BC3DB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66C868DA1AE0BE8D00BC3DB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66C868DB1AE0BE8D00BC3DB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66C868DF1AE0BE8D00BC3DB1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66C868E01AE0BE8D00BC3DB1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66C868EE1AE0BE8D00BC3DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66C868EF1AE0BE8D00BC3DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66C868F11AE0BE8D00BC3DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/nacho/Desktop/Structure,
+					SDK/Frameworks,
+					/Users/nacho/Desktop/Structure,
+					SDK/Frameworks,
+				);
+				INFOPLIST_FILE = SenseAV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		66C868F21AE0BE8D00BC3DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/nacho/Desktop/Structure,
+					SDK/Frameworks,
+					/Users/nacho/Desktop/Structure,
+					SDK/Frameworks,
+				);
+				INFOPLIST_FILE = SenseAV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		66C868F41AE0BE8D00BC3DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SenseAVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SenseAV.app/SenseAV";
+			};
+			name = Debug;
+		};
+		66C868F51AE0BE8D00BC3DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SenseAVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SenseAV.app/SenseAV";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66C868C81AE0BE8D00BC3DB1 /* Build configuration list for PBXProject "SenseAV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66C868EE1AE0BE8D00BC3DB1 /* Debug */,
+				66C868EF1AE0BE8D00BC3DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66C868F01AE0BE8D00BC3DB1 /* Build configuration list for PBXNativeTarget "SenseAV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66C868F11AE0BE8D00BC3DB1 /* Debug */,
+				66C868F21AE0BE8D00BC3DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66C868F31AE0BE8D00BC3DB1 /* Build configuration list for PBXNativeTarget "SenseAVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66C868F41AE0BE8D00BC3DB1 /* Debug */,
+				66C868F51AE0BE8D00BC3DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66C868C51AE0BE8D00BC3DB1 /* Project object */;
+}
