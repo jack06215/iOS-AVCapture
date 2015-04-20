@@ -189,20 +189,29 @@
         return;
     }
     
-    
+    [self addAVPreviewLayer];
+    [self.AVCaptureSession commitConfiguration];
+
+}
+
+- (void)addAVPreviewLayer
+{
+    // AVPreviewLayer initialisation
     self.AVPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.AVCaptureSession];
-    //NSString *sessionPreset = AVCaptureSessionPresetPhoto;
-    //[self.AVCaptureSession setSessionPreset:sessionPreset];
+    
+    // Configure orientation of the prview window (Hard-coded horizontal in this case)
+    // http://stackoverflow.com/questions/15075300/avcapturevideopreviewlayer-orientation-need-landscape
+    self.AVPreviewLayer.transform =  CATransform3DMakeRotation(-M_PI/2, 0, 0, 1);
+    
+    
+    // Configure the size of resolution of preview window
     self.AVPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     self.AVPreviewLayer.frame = self.view.bounds;
     
-    self.AVPreviewLayer.transform =  CATransform3DMakeRotation(-M_PI/2, 0, 0, 1); // Hard-code orientation
     
-    self.AVPreviewLayer.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height);
+    
+    // Finally, plug this AVPreviewLayer onto the screen.
     [self.view.layer addSublayer:self.AVPreviewLayer];
-    
-    [self.AVCaptureSession commitConfiguration];
-
 }
 
 - (void)startColorCamera

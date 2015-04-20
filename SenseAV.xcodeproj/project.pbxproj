@@ -30,7 +30,7 @@
 		66C8691B1AE0BFDC00BC3DB1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8691A1AE0BFDC00BC3DB1 /* MessageUI.framework */; };
 		66C8691D1AE0BFE400BC3DB1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8691C1AE0BFE400BC3DB1 /* libz.dylib */; };
 		66C869211AE0C06B00BC3DB1 /* ViewController+Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66C869201AE0C06B00BC3DB1 /* ViewController+Camera.mm */; };
-		66FAA3FA1AE0EFB2000445D2 /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C869181AE0BFC800BC3DB1 /* Structure.framework */; };
+		66E8B24C1AE48130008081B2 /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E8B24B1AE48130008081B2 /* Structure.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +75,7 @@
 		66C8691C1AE0BFE400BC3DB1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		66C8691F1AE0C06B00BC3DB1 /* ViewController+Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+Camera.h"; sourceTree = "<group>"; };
 		66C869201AE0C06B00BC3DB1 /* ViewController+Camera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "ViewController+Camera.mm"; sourceTree = "<group>"; };
+		66E8B24B1AE48130008081B2 /* Structure.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Structure.framework; path = "../../../../Applications/Structure SDK/Frameworks/Structure.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66E8B24C1AE48130008081B2 /* Structure.framework in Frameworks */,
 				66C8691D1AE0BFE400BC3DB1 /* libz.dylib in Frameworks */,
 				66C8691B1AE0BFDC00BC3DB1 /* MessageUI.framework in Frameworks */,
 				66C868FF1AE0BF3100BC3DB1 /* CoreImage.framework in Frameworks */,
@@ -96,7 +98,6 @@
 				66C869071AE0BF5D00BC3DB1 /* UIKit.framework in Frameworks */,
 				66C869051AE0BF5000BC3DB1 /* Foundation.framework in Frameworks */,
 				66C869031AE0BF4900BC3DB1 /* GLKit.framework in Frameworks */,
-				66FAA3FA1AE0EFB2000445D2 /* Structure.framework in Frameworks */,
 				66C869011AE0BF3700BC3DB1 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +177,7 @@
 		66C8691E1AE0C01800BC3DB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66E8B24B1AE48130008081B2 /* Structure.framework */,
 				66C8691C1AE0BFE400BC3DB1 /* libz.dylib */,
 				66C8691A1AE0BFDC00BC3DB1 /* MessageUI.framework */,
 				66C869181AE0BFC800BC3DB1 /* Structure.framework */,
@@ -433,6 +435,8 @@
 					SDK/Frameworks,
 					/Users/nacho/Desktop/Structure,
 					SDK/Frameworks,
+					"$(SYSTEM_APPS_DIR)/Structure",
+					SDK/Frameworks,
 				);
 				INFOPLIST_FILE = SenseAV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -449,6 +453,8 @@
 					/Users/nacho/Desktop/Structure,
 					SDK/Frameworks,
 					/Users/nacho/Desktop/Structure,
+					SDK/Frameworks,
+					"$(SYSTEM_APPS_DIR)/Structure",
 					SDK/Frameworks,
 				);
 				INFOPLIST_FILE = SenseAV/Info.plist;
