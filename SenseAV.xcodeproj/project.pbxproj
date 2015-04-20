@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6604932C1AE4BFE70089204B /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E8B24B1AE48130008081B2 /* Structure.framework */; };
 		66C868D31AE0BE8D00BC3DB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C868D21AE0BE8D00BC3DB1 /* main.m */; };
 		66C868D61AE0BE8D00BC3DB1 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66C868D51AE0BE8D00BC3DB1 /* AppDelegate.mm */; };
 		66C868D91AE0BE8D00BC3DB1 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66C868D81AE0BE8D00BC3DB1 /* ViewController.mm */; };
@@ -30,7 +31,6 @@
 		66C8691B1AE0BFDC00BC3DB1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8691A1AE0BFDC00BC3DB1 /* MessageUI.framework */; };
 		66C8691D1AE0BFE400BC3DB1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8691C1AE0BFE400BC3DB1 /* libz.dylib */; };
 		66C869211AE0C06B00BC3DB1 /* ViewController+Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66C869201AE0C06B00BC3DB1 /* ViewController+Camera.mm */; };
-		66E8B24C1AE48130008081B2 /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E8B24B1AE48130008081B2 /* Structure.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		660493281AE4BFC40089204B /* Structure SDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Structure SDK"; path = "../../../../Applications/Structure SDK"; sourceTree = "<group>"; };
+		6604932A1AE4BFD50089204B /* Reference */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Reference; path = "../../../../Applications/Structure SDK/Reference"; sourceTree = "<group>"; };
 		66C868CD1AE0BE8D00BC3DB1 /* SenseAV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SenseAV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C868D11AE0BE8D00BC3DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66C868D21AE0BE8D00BC3DB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66E8B24C1AE48130008081B2 /* Structure.framework in Frameworks */,
+				6604932C1AE4BFE70089204B /* Structure.framework in Frameworks */,
 				66C8691D1AE0BFE400BC3DB1 /* libz.dylib in Frameworks */,
 				66C8691B1AE0BFDC00BC3DB1 /* MessageUI.framework in Frameworks */,
 				66C868FF1AE0BF3100BC3DB1 /* CoreImage.framework in Frameworks */,
@@ -177,6 +179,8 @@
 		66C8691E1AE0C01800BC3DB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6604932A1AE4BFD50089204B /* Reference */,
+				660493281AE4BFC40089204B /* Structure SDK */,
 				66E8B24B1AE48130008081B2 /* Structure.framework */,
 				66C8691C1AE0BFE400BC3DB1 /* libz.dylib */,
 				66C8691A1AE0BFDC00BC3DB1 /* MessageUI.framework */,
@@ -437,6 +441,8 @@
 					SDK/Frameworks,
 					"$(SYSTEM_APPS_DIR)/Structure",
 					SDK/Frameworks,
+					"$(SYSTEM_APPS_DIR)/Structure",
+					SDK/Frameworks,
 				);
 				INFOPLIST_FILE = SenseAV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -453,6 +459,8 @@
 					/Users/nacho/Desktop/Structure,
 					SDK/Frameworks,
 					/Users/nacho/Desktop/Structure,
+					SDK/Frameworks,
+					"$(SYSTEM_APPS_DIR)/Structure",
 					SDK/Frameworks,
 					"$(SYSTEM_APPS_DIR)/Structure",
 					SDK/Frameworks,
