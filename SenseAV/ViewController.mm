@@ -30,7 +30,10 @@
 {
     [super viewDidAppear:animated];
     [self startColorCamera];
+    self.PopupMSGLabel.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
+
     [self.view bringSubviewToFront:self.PressMSGButton];
+    //[self.view addSubview: self.PopupMSGLabel];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -56,10 +59,55 @@
     return UIInterfaceOrientationLandscapeRight;
 }
 
+- (void)showAppStatusMessage:(NSString *)msg
+{
+    _appStatus.needsDisplayOfStatusMessage = true;
+    [self.view.layer removeAllAnimations];
+    
+    [self.PopupMSGLabel setText:msg];
+    [self.PopupMSGLabel setHidden:NO];
+    
+    // Progressively show the message label.
+    [self.view setUserInteractionEnabled:false];
+    [self.view bringSubviewToFront:self.PopupMSGLabel];
+    //
+    [UIView animateWithDuration:0.5f
+                     animations:^()
+     {
+         self.PopupMSGLabel.alpha = 1.0f;
+         //self.PopupMSGLabel.backgroundColor = 0.7f;
+     }
+                     completion:nil
+     ];
+}
+
+- (void)hideAppStatusMessage
+{
+    
+    _appStatus.needsDisplayOfStatusMessage = false;
+    [self.view.layer removeAllAnimations];
+    
+    [UIView animateWithDuration:0.5f
+                     animations:^()
+     {
+         self.PopupMSGLabel.alpha = 0.0f;
+     }
+                     completion:^(BOOL finished)
+     {
+         // If nobody called showAppStatusMessage before the end of the animation, do not hide it.
+         if (!_appStatus.needsDisplayOfStatusMessage)
+         {
+             [self.PopupMSGLabel setHidden:YES];
+             [self.view setUserInteractionEnabled:true];
+             [self.view sendSubviewToBack:self.PopupMSGLabel];
+         }
+     }];
+}
 
 - (IBAction)ShowMSG:(UIButton *)sender
 {
-    [self.view bringSubviewToFront:self.PopupMSGLabel];
-    [self.PopupMSGLabel setText:@"Knocking on heaven door!"];
+    [self showAppStatusMessage:@"Knocking on heaven door!"];
+    [self hideAppStatusMessage];
+    //[self.PopupMSGLabel setText:@"Knocking on heaven door!"];
 }
 @end
