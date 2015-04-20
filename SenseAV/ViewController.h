@@ -14,8 +14,6 @@
 //#import "CalibrationOverlay.h"
 //#import "MeshViewController.h"
 
-
-
 struct AppStatus
 {
     NSString* const pleaseConnectSensorMessage = @"Please connect Structure Sensor.";
