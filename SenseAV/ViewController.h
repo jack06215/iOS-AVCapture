@@ -29,7 +29,7 @@ struct AppStatus
     };
     
     // Structure Sensor status.
-    SensorStatus sensorStatus = SensorStatusOk;
+    SensorStatus sensorStatus = SensorStatusNeedsUserToCharge;
     
     // Whether iOS camera access was granted by the user.
     bool colorCameraIsAuthorized = true;
@@ -47,7 +47,11 @@ struct AppStatus
 {
     // Manages the app status messages.
     AppStatus _appStatus;
+    UIImageView *_colorImageView;
 }
+
+-(void)updateAppStatusMessage;
+
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *AVPreviewLayer;
 @property (nonatomic, strong) AVCaptureSession *AVCaptureSession;
 @property (nonatomic, strong) AVCaptureDevice *AVDevice;

@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #define HAS_LIBCXX
-
 #import "ViewController.h"
 #import <Structure/Structure.h>
 #import <Structure/StructureSLAM.h>
@@ -20,7 +19,5 @@
 
 - (void) startColorCamera;
 - (void) stopColorCamera;
-- (void) setColorCameraParametersForInit;
-- (void) setColorCameraParametersForRecording;
 
 @end

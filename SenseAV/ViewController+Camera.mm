@@ -8,13 +8,13 @@
 
 #import "ViewController.h"
 #import "ViewController+Camera.h"
-
 #import <Structure/Structure.h>
 #import <Structure/StructureSLAM.h>
-
 #import <objc/runtime.h>
 
-@implementation ViewController (Camera) 
+@implementation ViewController (Camera)
+
+#pragma mark - Camera Configuration
 
 -(void)avCaptureSessionDidStartRunning:(NSNotification*)notification
 {
@@ -60,6 +60,7 @@
                          
                          [self startColorCamera];
                          _appStatus.colorCameraIsAuthorized = true;
+                         [self updateAppStatusMessage];
                      });
                  }
              }];
@@ -189,29 +190,9 @@
         return;
     }
     
-    [self addAVPreviewLayer];
+    //[self addAVPreviewLayer];
     [self.AVCaptureSession commitConfiguration];
 
-}
-
-- (void)addAVPreviewLayer
-{
-    // AVPreviewLayer initialisation
-    self.AVPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.AVCaptureSession];
-    
-    // Configure orientation of the prview window (Hard-coded horizontal in this case)
-    // http://stackoverflow.com/questions/15075300/avcapturevideopreviewlayer-orientation-need-landscape
-    self.AVPreviewLayer.transform =  CATransform3DMakeRotation(-M_PI/2, 0, 0, 1);
-    
-    
-    // Configure the size of resolution of preview window
-    self.AVPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    self.AVPreviewLayer.frame = self.view.bounds;
-    
-    
-    
-    // Finally, plug this AVPreviewLayer onto the screen.
-    [self.view.layer addSublayer:self.AVPreviewLayer];
 }
 
 - (void)startColorCamera
@@ -243,45 +224,94 @@
     self.AVDevice = nil;
 }
 
-- (void)setColorCameraParametersForInit
-{
-    NSError *error;
-    
-    [self.AVDevice lockForConfiguration:&error];
-    
-    // Auto-exposure
-    if ([self.AVDevice isExposureModeSupported:AVCaptureExposureModeContinuousAutoExposure])
-        [self.AVDevice setExposureMode:AVCaptureExposureModeContinuousAutoExposure];
-    
-    // Auto-white balance.
-    if ([self.AVDevice isWhiteBalanceModeSupported:AVCaptureWhiteBalanceModeContinuousAutoWhiteBalance])
-        [self.AVDevice setWhiteBalanceMode:AVCaptureWhiteBalanceModeContinuousAutoWhiteBalance];
-    
-    [self.AVDevice unlockForConfiguration];
-    
-}
-
-- (void)setColorCameraParametersForRecording
-{
-    NSError *error;
-    
-    [self.AVDevice lockForConfiguration:&error];
-    
-    // Exposure locked to its current value.
-    if([self.AVDevice isExposureModeSupported:AVCaptureExposureModeLocked])
-        [self.AVDevice setExposureMode:AVCaptureExposureModeLocked];
-    
-    // White balance locked to its current value.
-    if([self.AVDevice isWhiteBalanceModeSupported:AVCaptureWhiteBalanceModeLocked])
-        [self.AVDevice setWhiteBalanceMode:AVCaptureWhiteBalanceModeLocked];
-    
-    [self.AVDevice unlockForConfiguration];
-}
+#pragma mark - Image Rendering Protocol
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
     // Process the frame...(to be finished by YOU)
+    [self renderColorFrame:sampleBuffer];
 }
 
+
+#pragma mark - Image Rendering
+
+- (void)renderColorFrame:(CMSampleBufferRef)sampleBuffer
+{
+    // Get a image buffer that holding video frame
+    CVImageBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+    
+    // Lock the image buffer base address
+    CVPixelBufferLockBaseAddress(pixelBuffer, 0);
+    
+    // Obtain the image dimension
+    size_t cols = CVPixelBufferGetWidth(pixelBuffer);
+    size_t rows = CVPixelBufferGetHeight(pixelBuffer);
+    
+    // Create a RGB color space
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    // Obtain the raw image data
+    unsigned char *ptr = (unsigned char *) CVPixelBufferGetBaseAddressOfPlane(pixelBuffer, 0);
+    
+    
+    // Create an NSData to store the image
+    NSData *data = [[NSData alloc] initWithBytes:ptr length:rows*cols*4];
+    
+    // The image buffer can now be unlocked
+    CVPixelBufferUnlockBaseAddress(pixelBuffer, 0);
+    
+    // Create a bitmap information
+    CGBitmapInfo bitmapInfo;
+    bitmapInfo = (CGBitmapInfo)kCGImageAlphaNoneSkipFirst;
+    bitmapInfo |= kCGBitmapByteOrder32Little;
+    
+    // Read the image
+    CGDataProviderRef provider = CGDataProviderCreateWithCFData((CFDataRef)data);
+    CGImageRef imageRef = CGImageCreate(cols,
+                                        rows,
+                                        8,
+                                        8 * 4,
+                                        cols*4,
+                                        colorSpace,
+                                        bitmapInfo,
+                                        provider,
+                                        NULL,
+                                        false,
+                                        kCGRenderingIntentDefault);
+    
+    // Feed the image data to our image viweer
+    _colorImageView.image = [[UIImage alloc] initWithCGImage:imageRef];
+    
+    
+    // Clean up stuff
+    CGImageRelease(imageRef);
+    CGDataProviderRelease(provider);
+    CGColorSpaceRelease(colorSpace);
+    
+}
+
+#pragma mark - AVPreviewLayer
+
+/* 
+    (Not used in this program, just for didactic prupose)
+    Image preview using an AVPreviewLayer.
+
+*/
+- (void)addAVPreviewLayer
+{
+    // AVPreviewLayer initialisation
+    self.AVPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.AVCaptureSession];
+    
+    // Configure orientation of the prview window (Hard-coded horizontal in this case)
+    // http://stackoverflow.com/questions/15075300/avcapturevideopreviewlayer-orientation-need-landscape
+    self.AVPreviewLayer.transform =  CATransform3DMakeRotation(-M_PI/2, 0, 0, 1);
+    
+    // Configure the size of resolution of preview window
+    self.AVPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    self.AVPreviewLayer.frame = self.view.bounds;
+    
+    // Finally, plug this AVPreviewLayer onto the screen.
+    [self.view.layer addSublayer:self.AVPreviewLayer];
+}
 
 @end
